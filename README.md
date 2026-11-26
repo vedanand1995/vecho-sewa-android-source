@@ -13,3 +13,9 @@ Open the repository folder in Android Studio and allow Gradle sync. The Android 
 ## Build
 
 With Android SDK platform 35 installed, run `./gradlew assembleDebug` (or use Android Studio's Build > Make Project). The debug APK is written to `app/build/outputs/apk/debug/app-debug.apk`.
+
+## Original app recovered from the supplied APK
+
+The initially created Gradle app is only a starter shell; its `app-debug.apk` is not the original TeCHO+ app. The user later supplied the original signed APK. `dist/vecho-original.apk` is that exact APK and can be installed directly. The decoded Smali/resources in `403939_src/` now include Apktool metadata, and `scripts/rebuild-recovered-apk.sh` rebuilds them into an unsigned APK. The `recovered-java/` directory is JADX-generated Java for inspection; it is decompiled output, not the app's original Java source, and it is not a Gradle-compilable source set by itself.
+
+The recovered app uses package `com.argusoft.sewa.android.app`. If a starter APK with the same package is installed, uninstall it before installing the original APK, because they are signed by different certificates.
