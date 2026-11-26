@@ -1,10 +1,10 @@
-# TeCHO+ Android recovery project
+# Vecho+ Android recovery project
 
-This repository contains the supplied TeCHO+ APK, its recovered Smali/resources, JADX-generated Java for reference, and a small Android Studio starter module. The APK and recovered files are not the original developer's source project.
+This repository contains the supplied Vecho+ APK, its recovered Smali/resources, JADX-generated Java for reference, and a small Android Studio starter module. The APK and recovered files are not the original developer's source project.
 
 ## Install the actual app
 
-`dist/vecho-original.apk` is the exact signed APK supplied by the user. Install that to run the original TeCHO+ app. If the starter APK is already installed, uninstall it first: both use package `com.argusoft.sewa.android.app` but have different signing certificates.
+`dist/vecho-original.apk` is the exact signed APK supplied by the user. Install that to run the original Vecho+ app. If the starter APK is already installed, uninstall it first: both use package `com.argusoft.sewa.android.app` but have different signing certificates.
 
 ## Rebuild the recovered app
 
@@ -20,4 +20,4 @@ The rebuild source is Smali and decoded resources in `403939_src/`; the reposito
 
 ## Android Studio starter module
 
-The `app/` Gradle module is a clearly labeled starter shell, not the original TeCHO+ functionality. Android Studio's normal `assembleDebug` builds this starter module. Use the `signRecoveredApp` Gradle task above to rebuild the recovered original app instead.
+The `app/` Gradle module is a clearly labeled starter shell, not the original Vecho+ functionality. Android Studio's normal `assembleDebug` builds this starter module. Use the `signRecoveredApp` Gradle task above to rebuild the recovered original app instead.
