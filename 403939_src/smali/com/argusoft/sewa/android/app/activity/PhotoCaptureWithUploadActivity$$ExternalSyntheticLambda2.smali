@@ -1,0 +1,42 @@
+.class public final synthetic Lcom/argusoft/sewa/android/app/activity/PhotoCaptureWithUploadActivity$$ExternalSyntheticLambda2;
+.super Ljava/lang/Object;
+.source "D8$$SyntheticClass"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic f$0:Lcom/argusoft/sewa/android/app/activity/PhotoCaptureWithUploadActivity;
+
+.field public final synthetic f$1:Landroid/widget/FrameLayout;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/argusoft/sewa/android/app/activity/PhotoCaptureWithUploadActivity;Landroid/widget/FrameLayout;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/argusoft/sewa/android/app/activity/PhotoCaptureWithUploadActivity$$ExternalSyntheticLambda2;->f$0:Lcom/argusoft/sewa/android/app/activity/PhotoCaptureWithUploadActivity;
+
+    iput-object p2, p0, Lcom/argusoft/sewa/android/app/activity/PhotoCaptureWithUploadActivity$$ExternalSyntheticLambda2;->f$1:Landroid/widget/FrameLayout;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, Lcom/argusoft/sewa/android/app/activity/PhotoCaptureWithUploadActivity$$ExternalSyntheticLambda2;->f$0:Lcom/argusoft/sewa/android/app/activity/PhotoCaptureWithUploadActivity;
+
+    iget-object v1, p0, Lcom/argusoft/sewa/android/app/activity/PhotoCaptureWithUploadActivity$$ExternalSyntheticLambda2;->f$1:Landroid/widget/FrameLayout;
+
+    invoke-virtual {v0, v1, p1}, Lcom/argusoft/sewa/android/app/activity/PhotoCaptureWithUploadActivity;->lambda$onCreate$1$com-argusoft-sewa-android-app-activity-PhotoCaptureWithUploadActivity(Landroid/widget/FrameLayout;Landroid/view/View;)V
+
+    return-void
+.end method

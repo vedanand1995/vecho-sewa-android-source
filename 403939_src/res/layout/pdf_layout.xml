@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/pdf_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <ImageButton
+        android:id="@id/back_button"
+        android:background="@color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:src="@drawable/ic_menu_back"
+        android:tint="@color/video_view_titlebar"
+        android:layout_marginStart="10.0dip" />
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/default_tooltip_arrow_height"
+    android:elevation="10.0dip"
+    app:cardElevation="20.0dip"
+    app:contentPadding="@dimen/default_tooltip_arrow_height"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@id/work_log_file_status_image"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:src="@drawable/ic_image"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/description"
+            app:tint="@color/colorPrimary" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="5.0dip"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/listTextColor"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:id="@id/work_log_file_date"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@string/description"
+                android:lines="1"
+                android:fontFamily="@font/roboto_medium" />
+        </LinearLayout>
+        <TextView
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:id="@id/work_log_status"
+            android:background="@color/colorPrimary"
+            android:paddingTop="@dimen/default_tooltip_padding"
+            android:paddingBottom="@dimen/default_tooltip_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Synced"
+            android:paddingStart="@dimen/default_tooltip_arrow_height"
+            android:paddingEnd="@dimen/default_tooltip_arrow_height" />
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@id/work_log_file_retry"
+            android:visibility="gone"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:src="@drawable/ic_menu_refresh"
+            android:contentDescription="@string/description"
+            android:layout_marginStart="@dimen/default_tooltip_arrow_width" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

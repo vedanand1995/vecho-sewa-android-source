@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/toolbar" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="?android:actionBarSize">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:layout_weight="3.0">
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15.0dip"
+                android:src="@drawable/techo_plus"
+                android:contentDescription="@string/techo" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginBottom="1.0dip"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginEnd="10.0dip">
+            <TextView
+                android:textSize="15.0sp"
+                android:gravity="center"
+                android:id="@id/version"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="1.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginEnd="10.0dip">
+            <TextView
+                android:textSize="15.0sp"
+                android:gravity="center"
+                android:id="@id/releaseDate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip">
+            <TextView
+                android:textSize="20.0sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/in_collaboration_with" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="9.0">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="3.0"
+                android:layout_weight="1.0">
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="15.0dip"
+                    android:src="@drawable/govtofgujarat"
+                    android:layout_weight="1.0"
+                    android:contentDescription="@string/government_of_gujarat" />
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="15.0dip"
+                    android:src="@drawable/nhm_logo"
+                    android:layout_weight="1.0"
+                    android:contentDescription="@string/national_health_mission" />
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="15.0dip"
+                    android:src="@drawable/sewa_rural"
+                    android:layout_weight="1.0"
+                    android:contentDescription="@string/sewa_rural" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0">
+                <ImageView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="15.0dip"
+                    android:src="@drawable/unicef"
+                    android:layout_weight="1.0"
+                    android:contentDescription="@string/unicef" />
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="15.0dip"
+                    android:src="@drawable/gvk_emri"
+                    android:layout_weight="1.0"
+                    android:contentDescription="@string/gvk_emri" />
+                <ImageView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="15.0dip"
+                    android:src="@drawable/gvk_emri_new"
+                    android:scaleType="centerCrop"
+                    android:layout_weight="2.0"
+                    android:contentDescription="@string/gvk_emri" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0">
+                <ImageView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="15.0dip"
+                    android:src="@drawable/medplat_argus"
+                    android:layout_weight="1.0"
+                    android:contentDescription="@string/medplat" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip">
+            <TextView
+                android:textSize="18.0sp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:autoLink="web"
+                android:id="@id/link"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

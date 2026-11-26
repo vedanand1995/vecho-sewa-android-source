@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_width="360.0dip"
+    android:layout_height="344.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:background="@drawable/breast_diagram"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="25.0dip"
+        android:layout_marginTop="0.0dip"
+        android:layout_marginRight="25.0dip"
+        android:layout_marginBottom="25.0dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/breast_examination"
+        android:layout_marginStart="25.0dip"
+        android:layout_marginEnd="25.0dip" />
+    <CheckBox
+        android:id="@id/breast_chkBox1"
+        android:tag="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="103.0dip"
+        android:checked="false"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="41.0dip"
+        android:layout_alignParentStart="true"
+        style="@style/CustomCheckBox" />
+    <CheckBox
+        android:id="@id/breast_chkBox2"
+        android:tag="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="89.0dip"
+        android:checked="false"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="88.0dip"
+        android:layout_alignParentStart="true"
+        style="@style/CustomCheckBox" />
+    <CheckBox
+        android:id="@id/breast_chkBox3"
+        android:tag="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_alignTop="@id/breast_chkBox2"
+        android:layout_marginStart="-103.0dip"
+        android:layout_toEndOf="@id/breast_chkBox7"
+        style="@style/CustomCheckBox" />
+    <CheckBox
+        android:id="@id/breast_chkBox4"
+        android:tag="4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_alignTop="@id/breast_chkBox1"
+        android:layout_toEndOf="@id/breast_chkBox3"
+        style="@style/CustomCheckBox" />
+    <CheckBox
+        android:id="@id/breast_chkBox5"
+        android:tag="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_below="@id/breast_chkBox1"
+        android:layout_marginEnd="-88.0dip"
+        android:layout_toStartOf="@id/breast_chkBox2"
+        style="@style/CustomCheckBox" />
+    <CheckBox
+        android:id="@id/breast_chkBox6"
+        android:tag="6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_below="@id/breast_chkBox1"
+        android:layout_toEndOf="@id/breast_chkBox2"
+        style="@style/CustomCheckBox" />
+    <CheckBox
+        android:id="@id/breast_chkBox7"
+        android:tag="7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_below="@id/breast_chkBox1"
+        android:layout_marginEnd="103.0dip"
+        android:layout_alignParentEnd="true"
+        style="@style/CustomCheckBox" />
+    <CheckBox
+        android:id="@id/breast_chkBox8"
+        android:tag="8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_below="@id/breast_chkBox1"
+        android:layout_marginEnd="50.0dip"
+        android:layout_alignParentEnd="true"
+        style="@style/CustomCheckBox" />
+    <CheckBox
+        android:id="@id/breast_chkBox9"
+        android:tag="9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/breast_chkBox1"
+        style="@style/CustomCheckBox" />
+    <CheckBox
+        android:id="@id/breast_chkBox10"
+        android:tag="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="-103.0dip"
+        android:layout_toEndOf="@id/breast_chkBox7"
+        style="@style/CustomCheckBox" />
+    <CheckBox
+        android:id="@id/breast_chkBox11"
+        android:tag="11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="137.0dip"
+        android:checked="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@id/breast_chkBox1"
+        style="@style/CustomCheckBox" />
+    <CheckBox
+        android:id="@id/breast_chkBox12"
+        android:tag="12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_alignTop="@id/breast_chkBox11"
+        android:layout_toEndOf="@id/breast_chkBox2"
+        style="@style/CustomCheckBox" />
+    <CheckBox
+        android:id="@id/breast_chkBox13"
+        android:tag="13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_alignTop="@id/breast_chkBox11"
+        android:layout_marginEnd="120.0dip"
+        android:layout_alignParentEnd="true"
+        style="@style/CustomCheckBox" />
+    <CheckBox
+        android:id="@id/breast_chkBox14"
+        android:tag="14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_alignTop="@id/breast_chkBox11"
+        android:layout_alignStart="@id/breast_chkBox8"
+        style="@style/CustomCheckBox" />
+</RelativeLayout>

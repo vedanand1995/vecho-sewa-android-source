@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Child Weight Growth Chart"
+        style="@style/ListTitleView" />
+    <TextView
+        android:id="@id/childName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Child Name"
+        style="@style/CustomSubtitleView" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip">
+        <com.argusoft.sewa.android.app.component.VerticalTextView
+            android:gravity="center"
+            android:id="@id/weightLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Weight (in Kgs)"
+            android:textAlignment="center"
+            style="@style/ListTitleView" />
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@id/chart1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <TextView
+        android:gravity="center"
+        android:id="@id/ageLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:text="Age (In Months)"
+        android:textAlignment="center"
+        style="@style/ListTitleView" />
+</LinearLayout>

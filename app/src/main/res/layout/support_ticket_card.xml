@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@id/card_body"
+    android:background="?android:selectableItemBackground"
+    android:paddingTop="12.0dip"
+    android:paddingBottom="12.0dip"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="14.0dip"
+    android:paddingEnd="8.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+        <TextView
+            android:textSize="16.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:id="@id/card_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip">
+            <FrameLayout
+                android:id="@id/card_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="13.0sp"
+                android:textColor="@color/support_muted"
+                android:id="@id/card_meta"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:layout_marginStart="8.0dip" />
+        </LinearLayout>
+        <TextView
+            android:textSize="13.0sp"
+            android:textColor="@color/support_muted"
+            android:id="@id/card_facts"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip" />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:src="@drawable/ic_support_chevron"
+        android:tint="@color/support_muted"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="6.0dip" />
+</LinearLayout>

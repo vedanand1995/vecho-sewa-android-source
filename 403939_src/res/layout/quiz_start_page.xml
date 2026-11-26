@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/my_gradient"
+    android:padding="25.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.material.textview.MaterialTextView
+        android:textSize="20.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20.0dip"
+        android:text="Ready for the Quiz?" />
+    <com.google.android.material.textview.MaterialTextView
+        android:textSize="16.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20.0dip"
+        android:text="Test your course skill in our short quiz section!" />
+    <com.google.android.material.textview.MaterialTextView
+        android:textSize="16.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20.0dip"
+        android:text="Put everything you've learned to the test and show how much you've learnt so far.. " />
+    <com.google.android.material.textview.MaterialTextView
+        android:textSize="18.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/lightYellow"
+        android:id="@id/questionCount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20.0dip"
+        android:text="10 questions 15 - 20 minutes"
+        android:textAlignment="center" />
+    <ImageView
+        android:layout_gravity="center"
+        android:padding="30.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="240.0dip"
+        android:layout_marginBottom="20.0dip"
+        android:src="@drawable/start_quiz"
+        android:scaleType="centerInside" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@id/startButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:actionBarSize"
+        android:text="Let's Start"
+        android:stateListAnimator="@null"
+        style="@style/CustomLightButton" />
+</LinearLayout>

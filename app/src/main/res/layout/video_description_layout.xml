@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:paddingBottom="10.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="10.0dip"
+    android:paddingEnd="10.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:background="@color/listSeparatorBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingTop="10.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:weightSum="1.0">
+        <ScrollView
+            android:scrollbars="none"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75">
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@id/video_desc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+        <LinearLayout
+            android:gravity="end|center"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25">
+            <ImageView
+                android:id="@id/open_image"
+                android:background="@color/white"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:src="@drawable/image" />
+            <ImageView
+                android:id="@id/open_audio"
+                android:background="@color/white"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:src="@drawable/play_audio" />
+            <ImageView
+                android:id="@id/open_video"
+                android:background="@color/white"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:src="@drawable/play_video" />
+            <ImageView
+                android:id="@id/open_pdf"
+                android:background="@color/white"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:src="@drawable/pdf" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

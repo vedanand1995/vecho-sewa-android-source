@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        style="@style/ListTitleView" />
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:id="@id/notification_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="5.0dip">
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@id/due_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/due_count"
+            style="LastUpdateLabel" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0"
+            style="LastUpdateLabel" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=")"
+            style="LastUpdateLabel" />
+    </LinearLayout>
+</LinearLayout>

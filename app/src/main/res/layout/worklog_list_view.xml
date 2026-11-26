@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:listPreferredItemHeight"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:listPreferredItemHeight">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@id/work_log_status_image"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:src="@drawable/pending"
+            android:contentDescription="@string/description" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="5.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent">
+                <TextView
+                    android:textSize="12.0sp"
+                    android:id="@id/work_log_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description" />
+                <ImageView
+                    android:id="@id/work_log_info"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/ic_menu_about"
+                    android:scaleType="fitStart"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/description"
+                    android:layout_marginStart="5.0dip" />
+            </LinearLayout>
+            <TextView
+                android:textSize="16.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/lastUpdateLabelTextColor"
+                android:id="@id/work_log_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:fontFamily="@font/roboto_medium" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/listTextColor"
+                android:id="@id/work_log_task"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:textAllCaps="true"
+                android:fontFamily="@font/roboto_bold" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/llChild"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/action_button_padding" />
+</LinearLayout>

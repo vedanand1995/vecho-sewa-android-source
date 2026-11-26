@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.material.textview.MaterialTextView
+        android:textSize="16.0sp"
+        android:textColor="@color/textColor"
+        android:id="@id/fileTypeHeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10.0dip"
+        style="@style/ListTitleView" />
+    <View
+        android:background="@color/detailsBackgroundBorder"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip" />
+</LinearLayout>

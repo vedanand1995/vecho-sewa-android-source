@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:paddingTop="5.0dip"
+    android:paddingBottom="5.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="horizontal"
+        android:id="@id/parentLayout"
+        android:background="@drawable/custom_datepicker_unselected"
+        android:padding="5.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/guideline"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            app:layout_constraintGuide_percent="0.4" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/guideline2"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            app:layout_constraintGuide_percent="0.8" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/guideline3"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            app:layout_constraintGuide_percent="0.9" />
+        <com.google.android.material.textview.MaterialTextView
+            android:gravity="center"
+            android:id="@id/service"
+            android:padding="4.0dip"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="Service Provided"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.google.android.material.textview.MaterialTextView
+            android:gravity="center"
+            android:id="@id/count"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            android:layout_weight="1.0"
+            app:layout_constraintBottom_toBottomOf="@id/service"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@id/service" />
+        <com.google.android.material.textview.MaterialTextView
+            android:gravity="center"
+            android:id="@id/amount"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="Count"
+            android:layout_weight="1.0"
+            app:layout_constraintBottom_toBottomOf="@id/count"
+            app:layout_constraintEnd_toStartOf="@id/guideline3"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="@id/count" />
+        <CheckBox
+            android:gravity="end"
+            android:id="@id/checkbox"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_weight="0.5"
+            app:layout_constraintBottom_toBottomOf="@id/amount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/amount" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/memberDetailsLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

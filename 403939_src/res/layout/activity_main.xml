@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/toolbar" />
+    <androidx.core.widget.NestedScrollView
+        android:id="@id/bodyScroll"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:fillViewport="true"
+        android:layout_weight="1.0">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/bodyLayoutContainer"
+            android:padding="20.0dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:clipToPadding="false"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:id="@id/amountLayoutForMainScreen"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.button.MaterialButton
+            android:id="@id/amountButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?android:actionBarSize"
+            android:text="@string/next"
+            android:stateListAnimator="@null"
+            style="@style/AmountButton" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:id="@id/footerLayout"
+        android:background="@color/buttonBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.button.MaterialButton
+            android:id="@id/nextButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?android:actionBarSize"
+            android:text="@string/next"
+            android:stateListAnimator="@null"
+            style="@style/CustomButton" />
+    </LinearLayout>
+</LinearLayout>

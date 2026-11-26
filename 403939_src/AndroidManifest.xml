@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    android:compileSdkVersion="28"
+    android:compileSdkVersionCodename="9"
+    package="com.argusoft.sewa.android.app"
+    platformBuildVersionCode="28"
+    platformBuildVersionName="9"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-feature
+        android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <!-- Allows the app to create network sockets and use customised network protocols. The browser and other applications provide the means to send data to the Internet, so this permission is not required to send data to the Internet. -->
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+    <!-- Allows the app to view information about network connections such as which networks exist and are connected. -->
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- This app can take pictures and record videos using the camera while the app is in use. -->
+    <uses-permission
+        android:name="android.permission.CAMERA" />
+    <!-- This app can record audio using the microphone while the app is in use. -->
+    <uses-permission
+        android:name="android.permission.RECORD_AUDIO" />
+    <!-- Allows the app to write the contents of your shared storage. -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Allows the app to call phone numbers without your intervention. This may result in unexpected charges or calls. Note that this doesn't allow the app to call emergency numbers. Malicious apps may cost you money by making calls without your confirmation, or dial carrier codes which cause incoming calls to be automatically forwarded to another number. -->
+    <uses-permission
+        android:name="android.permission.CALL_PHONE" />
+    <!-- Allows the app to start itself as soon as the system has finished booting. This can make it take longer to start the phone and allow the app to slow down the overall phone by always running. -->
+    <uses-permission
+        android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Allows the app to access the phone features of the device. This permission allows the app to determine the phone number and device IDs, whether a call is active, and the remote number connected by a call. -->
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE" />
+    <!-- This app can get your approximate location from location services while the app is in use. Location services for your device must be turned on for the app to get location. -->
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- This app can get your precise location from location services while the app is in use. Location services for your device must be turned on for the app to get location. This may increase battery usage. -->
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Allows the app to control vibration. -->
+    <uses-permission
+        android:name="android.permission.VIBRATE" />
+    <!-- Allows the app to read the contents of your shared storage. -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Allows an application to request installation of packages. -->
+    <uses-permission
+        android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- Allows the app to read image files from your shared storage. -->
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_IMAGES" />
+    <!-- Allows the app to read audio files from your shared storage. -->
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_AUDIO" />
+    <!-- Allows the app to read video files from your shared storage. -->
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <!-- Allows the app to make use of foreground services. -->
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE" />
+    <queries>
+        <provider
+            android:authorities="com.argusoft.sewa.android.app.provider" />
+    </queries>
+    <!-- Allows the app to show notifications -->
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Allows the app to prevent the phone from going to sleep. -->
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK" />
+    <!-- Allows apps to accept cloud-to-device messages sent by the app's service. Using this service will incur data usage. Malicious apps could cause excess data usage. -->
+    <uses-permission
+        android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- Allows a publisher app to access a valid advertising ID directly or indirectly. -->
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <!-- Allows the app to retrieve its install referrer information. -->
+    <uses-permission
+        android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+    <application
+        android:theme="@style/techo_app"
+        android:label="@string/app_name"
+        android:icon="@drawable/app_icon"
+        android:name="com.argusoft.sewa.android.app.SewaApplication_"
+        android:allowClearUserData="false"
+        android:allowBackup="false"
+        android:vmSafeMode="true"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:extractNativeLibs="true"
+        android:usesCleartextTraffic="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.GenericHomeScreenActivity"
+            android:exported="false" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <receiver
+            android:name="com.argusoft.sewa.android.app.receiver.BootingReceiver">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.BOOT_COMPLETED" />
+                <action
+                    android:name="android.location.PROVIDERS_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.argusoft.sewa.android.app.service.GPSTracker" />
+        <service
+            android:name="com.argusoft.sewa.android.app.service.FileUploadForegroundService_"
+            android:exported="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="true" />
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_baseline_notifications_24" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+        <service
+            android:name="com.argusoft.sewa.android.app.fcm.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.argusoft.sewa.android.app.util.GenericFileProvider"
+            android:exported="false"
+            android:authorities="com.argusoft.sewa.android.app.provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <activity
+            android:theme="@style/techo_app"
+            android:name="com.argusoft.sewa.android.app.activity.WelcomeActivity_"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.MenuActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.GenericHomeScreenActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.LoginActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.FHSActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.DataQualityActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.MamtaDayActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.AnnouncementActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.WorkLogActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.DynamicFormActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.CustomVideoPlayerActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.DisplayMorbiditiesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.WorkLogFileActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.HomeScreenActivityFHW_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.HomeScreenActivityMPHW_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.CustomMandatoryVideoPlayerActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.CustomPhotoCaptureActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.CFHCActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name="com.argusoft.sewa.android.app.qrscanner.QRScannerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.DownloadProgressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.AboutActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.GetHelpActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.RaiseHelpActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.SupportTicketActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.WorkStatusActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NotificationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.AssignFamilyActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.MoveToProductionActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.RchVillageProfileActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.MyPeopleActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.MyPeopleAwwActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.HighRiskPregnancyActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.CustomImageViewerActivity_"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="false" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.CustomPDFViewerActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.HomeScreenActivityASHA_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.HomeScreenActivityAww_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.FHSAwwActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NotificationAwwActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NCDScreeningAshaActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NcdScreeningFhwActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.CbacDetailsActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.MyPeopleAshaActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NCDRegisterFHWActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.LibraryActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.MigrateOutActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.MigrateInActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.MigrationInConfirmationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.MigrationOutConfirmationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.HomeScreenActivityCHO_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.MigrationRevertActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NotificationAshaActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.FHSAshaActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NPCBScreening_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NPCBScreeningFhw_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.WorkRegisterActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.WorkRegisterChoActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.WorkRegisterLineListActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.HomeScreenActivityFHSR_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.PhoneNumberVerificationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NotificationOtherServicesActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.HighRiskAshaActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NcdRegisterAshaActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.WorkRegisterAshaActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.ReportedEventConfirmationNotificationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.FhwDeliveryConfirmationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.FhwMemberMigrationConfirmationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.FhwDeathConfirmationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.FamilyMigrationOutActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.FamilyMergeActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.FamilySplitActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.FamilyMigrationInConfirmationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.FhwFamilyMigrationConfirmationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.TakeHomeRation_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.DailyNutritionActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.PregnancyStatusActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.HomeScreenActivityRBSK_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.HeadToToeScreeningActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.MobileNumberValidationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.HomeScreenMenuActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.OPDFacilityActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.HomeScreenActivityLabTechnician_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.MemberGeriatricListActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.TravellersScreeningActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.IDSP2Activity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.FamilyMigrationRevertActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.LMSActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.LMSVideoPlayerActivity_"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.LmsQuestionModuleActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.LmsProgressReportActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.LmsInteractiveQuestionModuleActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.lms.LmsCourseListActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.lms.LmsCourseDetailActivity_"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.lms.LmsAnswerViewActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NDHMHealthIdManagementActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NDHMHealthIdCreationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NDHMHealthIdCaptureActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NDHMOfflineHealthIdManagementActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NDHMOfflineHealthIdCreationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.AbhaNumberActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.AbhaNumberManagementActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.FingerPrintScannerActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.AdolescentEventNotificationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.ABDMRecordLinkActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.HomeScreenActivityMO_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.RBSKWorkStatusActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.LmsSimulationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.IncentivesReportActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.AshaFacilitatorIncentiveFlowActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.VeryHighRiskPregnancyActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NamoshreeActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.SamplePhotoPickerActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.PhotoCaptureWithUploadActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.HomeScreenActivityASHAFacilitator_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.FHWIncentiveFlowActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.RoutineImmunizationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.RIInventoryReturnActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.RiInventoryDetailsActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NPCBScreeningCHO_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.HomeScreenActivityOA_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.NPCBScreeningOA_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.AmrutpanSupervisionMOActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.DueList.DueListActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.RoutineImmunizationAshaActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.LabTestActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.OtpVerificationActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.IFASupplementationToSchoolActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.LabTestScreeningActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.HomeScreenActivityMPHS_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.FilariasisCampaignActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.LeprosySurveyActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.VBDSActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.ChlorinationStatusActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.argusoft.sewa.android.app.activity.BaseLineActivity_"
+            android:screenOrientation="portrait" />
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+            <meta-data
+                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+                android:value="true" />
+        </receiver>
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="false"
+            android:directBootAware="true">
+            <intent-filter
+                android:priority="-500">
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false"
+            android:directBootAware="true">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:exported="false"
+            android:authorities="com.argusoft.sewa.android.app.firebaseinitprovider"
+            android:initOrder="100"
+            android:directBootAware="true" />
+        <activity
+            android:theme="@style/zxing_CaptureTheme"
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:stateNotNeeded="true"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <provider
+            android:name="androidx.work.impl.WorkManagerInitializer"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.argusoft.sewa.android.app.workmanager-init"
+            android:directBootAware="false" />
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false" />
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:directBootAware="false" />
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false"
+            android:directBootAware="false" />
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="false" />
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action
+                    android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.BATTERY_OKAY" />
+                <action
+                    android:name="android.intent.action.BATTERY_LOW" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+                <action
+                    android:name="android.intent.action.DEVICE_STORAGE_OK" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.BOOT_COMPLETED" />
+                <action
+                    android:name="android.intent.action.TIME_SET" />
+                <action
+                    android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false">
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct" />
+        </service>
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false" />
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            android:exported="false" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false" />
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true" />
+    </application>
+</manifest>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    android:id="@id/my_toolbar"
+    android:background="@drawable/my_gradient"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:actionBarSize"
+    android:paddingEnd="5.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:id="@id/toolbar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent">
+        <com.google.android.material.textview.MaterialTextView
+            android:textAppearance="@style/ToolbarTitle"
+            android:id="@id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:textAlignment="center" />
+        <com.google.android.material.textview.MaterialTextView
+            android:textAppearance="@style/ToolbarSubtitle"
+            android:ellipsize="end"
+            android:id="@id/toolbar_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textAlignment="center" />
+    </LinearLayout>
+</androidx.appcompat.widget.Toolbar>

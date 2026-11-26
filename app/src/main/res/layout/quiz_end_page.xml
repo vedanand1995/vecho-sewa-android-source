@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/my_gradient"
+    android:padding="20.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@id/courseImage"
+        android:layout_width="fill_parent"
+        android:layout_height="200.0dip"
+        android:layout_marginBottom="20.0dip"
+        android:src="@drawable/well_done"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/techo"
+        android:paddingStart="30.0dip"
+        android:paddingEnd="30.0dip" />
+    <com.google.android.material.textview.MaterialTextView
+        android:textSize="18.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20.0dip"
+        android:text="Well done you've completed the quiz!" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ProgressBar
+            android:id="@id/progressbar"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:max="100"
+            android:progress="25"
+            android:secondaryProgress="100"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:layout_centerInParent="true"
+            style="?android:progressBarStyleHorizontal" />
+        <TextView
+            android:textSize="18.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@id/progressbarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25%"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <View
+        android:id="@id/separator1"
+        android:background="@android:color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginBottom="10.0dip" />
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@id/layer1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3.0dip"
+        android:weightSum="1.0" />
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@id/layer2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3.0dip"
+        android:layout_marginBottom="3.0dip"
+        android:weightSum="1.0" />
+    <View
+        android:id="@id/separator2"
+        android:background="@android:color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginBottom="10.0dip" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@id/restartButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:actionBarSize"
+        android:text="Restart Quiz"
+        android:stateListAnimator="@null"
+        style="@style/CustomLightButton" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@id/submitButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:actionBarSize"
+        android:text="Done"
+        android:stateListAnimator="@null"
+        style="@style/CustomLightButton" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@id/lockQuizButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:actionBarSize"
+        android:text="Lock Quiz and View Answer"
+        android:stateListAnimator="@null"
+        style="@style/CustomLightButton" />
+</LinearLayout>

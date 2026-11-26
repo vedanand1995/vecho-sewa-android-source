@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="0.3">
+        <include
+            layout="@layout/login_header" />
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:gravity="center"
+                android:layout_width="120.0dip"
+                android:layout_height="120.0dip"
+                android:src="@drawable/logo_circle"
+                android:contentDescription="@string/techo" />
+            <TextView
+                android:textSize="12.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/versionTextColor"
+                android:id="@id/versionView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="30.0dip"
+        android:paddingRight="30.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="0.4">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@id/txtUsername"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:hint="@string/username"
+                android:singleLine="true"
+                android:maxLength="30" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="password_toggle"
+            app:hintEnabled="false">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@id/txtPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@id/cbRememberMe"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="@string/remember_me" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton
+            android:textSize="20.0sp"
+            android:textColor="@color/toolbarTitleColor"
+            android:layout_gravity="center_horizontal"
+            android:id="@id/loginButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginRight="5.0dip"
+            android:minHeight="70.0dip"
+            android:text="@string/login"
+            android:singleLine="true"
+            android:backgroundTint="@color/buttonBackground" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="bottom|center"
+        android:orientation="vertical"
+        android:paddingLeft="16.0dip"
+        android:paddingRight="16.0dip"
+        android:paddingBottom="24.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="0.3">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="48.0dip"
+            android:layout_marginBottom="24.0dip"
+            android:baselineAligned="false">
+            <ImageView
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:src="@drawable/govtofgujarat"
+                android:scaleType="fitCenter"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/government_of_gujarat" />
+            <ImageView
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:src="@drawable/nhm_logo"
+                android:scaleType="fitCenter"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/national_health_mission" />
+            <ImageView
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:src="@drawable/gvk_emri_new"
+                android:scaleType="fitCenter"
+                android:layout_weight="1.5"
+                android:contentDescription="@string/gvk_emri" />
+            <ImageView
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:src="@drawable/sewa_rural"
+                android:scaleType="fitCenter"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/sewa_rural" />
+            <ImageView
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:src="@drawable/unicef"
+                android:scaleType="fitCenter"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/unicef" />
+        </LinearLayout>
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="32.0dip"
+            android:src="@drawable/medplat_argus"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/medplat" />
+    </LinearLayout>
+</LinearLayout>
