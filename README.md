@@ -1,21 +1,23 @@
-# TeCHO+ Android Studio project
+# TeCHO+ Android recovery project
 
-This repository contains an Android Studio/Gradle starter project for the TeCHO+ app, plus the supplied recovered APK contents in `403939_src/` and copied Android resources in `app/src/main/res/`.
+This repository contains the supplied TeCHO+ APK, its recovered Smali/resources, JADX-generated Java for reference, and a small Android Studio starter module. The APK and recovered files are not the original developer's source project.
 
-## Important source limitation
+## Install the actual app
 
-The supplied ZIP is an APK-decompiler output: it contains `smali/`, `smali_classes2/`, decoded resources, and a manifest, but **does not contain the original Java/Kotlin source, Gradle project, or dependency declarations**. Accordingly, the included `MainActivity` is a minimal starter screen, not a reconstruction of the original app's functionality. Rebuilding the original app requires recovering/decompiling the original APK and restoring its dependencies and configuration. The recovered smali files are retained for reference and are not compiled by this starter Gradle project.
+`dist/vecho-original.apk` is the exact signed APK supplied by the user. Install that to run the original TeCHO+ app. If the starter APK is already installed, uninstall it first: both use package `com.argusoft.sewa.android.app` but have different signing certificates.
 
-## Open in Android Studio
+## Rebuild the recovered app
 
-Open the repository folder in Android Studio and allow Gradle sync. The Android Gradle plugin is 8.7.3 and requires JDK 17+ and Android SDK platform 35 (Android Studio can install these).
+Open this repository in Android Studio, set `ANDROID_HOME` or `ANDROID_SDK_ROOT` to an installed Android SDK, then run the Gradle task **`signRecoveredApp`** from the Gradle tool window, or use:
 
-## Build
+```bash
+./gradlew signRecoveredApp
+```
 
-With Android SDK platform 35 installed, run `./gradlew assembleDebug` (or use Android Studio's Build > Make Project). The debug APK is written to `app/build/outputs/apk/debug/app-debug.apk`.
+This task runs `scripts/rebuild-recovered-apk.sh` to assemble `403939_src/` with Apktool, then signs the result with the local Android debug key. Output: `dist/vecho-rebuilt.apk`. The signature will not match the original publisher's, so uninstall the publisher-signed app before installing the rebuilt APK. To create only the unsigned APK, run `./gradlew rebuildRecoveredApp`.
 
-## Original app recovered from the supplied APK
+The rebuild source is Smali and decoded resources in `403939_src/`; the repository includes `apktool.yml` metadata. The `recovered-java/` directory contains JADX-generated Java for reading and search, not guaranteed compilable source. JADX reported decompilation errors, and dependencies/build configuration from the original developer project were not supplied.
 
-The initially created Gradle app is only a starter shell; its `app-debug.apk` is not the original TeCHO+ app. The user later supplied the original signed APK. `dist/vecho-original.apk` is that exact APK and can be installed directly. The decoded Smali/resources in `403939_src/` now include Apktool metadata, and `scripts/rebuild-recovered-apk.sh` rebuilds them into an unsigned APK. The `recovered-java/` directory is JADX-generated Java for inspection; it is decompiled output, not the app's original Java source, and it is not a Gradle-compilable source set by itself.
+## Android Studio starter module
 
-The recovered app uses package `com.argusoft.sewa.android.app`. If a starter APK with the same package is installed, uninstall it before installing the original APK, because they are signed by different certificates.
+The `app/` Gradle module is a clearly labeled starter shell, not the original TeCHO+ functionality. Android Studio's normal `assembleDebug` builds this starter module. Use the `signRecoveredApp` Gradle task above to rebuild the recovered original app instead.

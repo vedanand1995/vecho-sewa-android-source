@@ -4,3 +4,7 @@ local.properties
 **/build/
 *.iml
 .DS_Store
+# Generated original-app rebuild outputs and downloaded tooling
+dist/vecho-rebuilt*.apk
+dist/vecho-rebuilt*.apk.idsig
+tools/apktool.jar

@@ -1,3 +1,18 @@
 plugins {
     id 'com.android.application' version '8.7.3' apply false
 }
+
+tasks.register('rebuildRecoveredApp', Exec) {
+    group = 'build'
+    description = 'Rebuild the recovered TeCHO+ APK from Smali and decoded resources using Apktool.'
+    workingDir rootDir
+    commandLine 'bash', "$rootDir/scripts/rebuild-recovered-apk.sh"
+}
+
+tasks.register('signRecoveredApp', Exec) {
+    group = 'build'
+    description = 'Rebuild and sign the recovered TeCHO+ APK using the local Android SDK debug key.'
+    dependsOn tasks.named('rebuildRecoveredApp')
+    workingDir rootDir
+    commandLine 'bash', "$rootDir/scripts/sign-recovered-apk.sh"
+}
