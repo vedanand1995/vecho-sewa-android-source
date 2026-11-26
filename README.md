@@ -9,3 +9,7 @@ The supplied ZIP is an APK-decompiler output: it contains `smali/`, `smali_class
 ## Open in Android Studio
 
 Open the repository folder in Android Studio and allow Gradle sync. The Android Gradle plugin is 8.7.3 and requires JDK 17+ and Android SDK platform 35 (Android Studio can install these).
+
+## Build
+
+With Android SDK platform 35 installed, run `./gradlew assembleDebug` (or use Android Studio's Build > Make Project). The debug APK is written to `app/build/outputs/apk/debug/app-debug.apk`.
